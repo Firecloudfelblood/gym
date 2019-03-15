@@ -1,0 +1,33 @@
+<!DOCTYPE html >
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" th:href="@{css/index.css}" href="css/index.css">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Product list</h1>
+    <table class="responstable">
+        <tr>
+            <th></th>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Se Unio</th>
+
+        </tr>
+        <tr th:each="client :${clients}">
+            <th><input type="checkbox"></th>
+            <td th:text="${client.Id}">0000</td>
+            <td th:text="${client.name}">n/a</td>
+            <td th:text="${client.Email}">someone@somewhere.com</td>
+            <td th:text="${client.joined}">00/00/0000</td>
+        </tr>
+
+    </table>
+    <form th:object="${id}" th:action="@{/search}" method="get">
+        <input type="text" id="id" name="id" /><br />
+        <input type="submit" value="Buscar" />
+    </form>
+</body>
+</html>
