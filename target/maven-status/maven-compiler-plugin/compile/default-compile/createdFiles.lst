@@ -1,0 +1,4 @@
+com/erivalaxl/gym/entities/ClientEntitie.class
+com/erivalaxl/gym/controller/clientController.class
+com/erivalaxl/gym/repositories/ClientRepository.class
+com/erivalaxl/gym/GymApplication.class
