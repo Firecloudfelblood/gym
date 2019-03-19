@@ -24,7 +24,7 @@ public class clientController {
 
     @RequestMapping(value = "search", method = RequestMethod.GET)
     public String search(@RequestParam(value = "id", required = false) String id, Model model){
-        model.addAttribute("clients",repo.findById(id));
+        model.addAttribute("clients",repo.findByIdentity(id));
         return "clients";
     }
 }

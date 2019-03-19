@@ -18,7 +18,7 @@
         </tr>
         <tr th:each="client :${clients}">
             <th><input type="checkbox"></th>
-            <td th:text="${client.Id}">0000</td>
+            <td th:text="${client.identity}">0000</td>
             <td th:text="${client.name}">n/a</td>
             <td th:text="${client.Email}">someone@somewhere.com</td>
             <td th:text="${client.joined}">00/00/0000</td>

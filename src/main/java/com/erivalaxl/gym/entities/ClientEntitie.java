@@ -9,7 +9,8 @@ public class ClientEntitie {
 
     @Id
     public String id;
-    public String Id;
+    @Field("Id")
+    public String identity;
     public String Email;
     public String Address;
     @Field("Full Name")
@@ -20,20 +21,20 @@ public class ClientEntitie {
     public ClientEntitie() {
     }
 
-    public ClientEntitie(String id, String email, String address, String name, String joined) {
-        Id = id;
+    public ClientEntitie(String identity, String email, String address, String name, String joined) {
+        this.identity = identity;
         Email = email;
         Address = address;
         this.name = name;
         this.joined = joined;
     }
 
-    public String getId() {
-        return Id;
+    public String getIdentity() {
+        return identity;
     }
 
-    public void setId(String id) {
-        Id = id;
+    public void setIdentity(String identity) {
+        this.identity = identity;
     }
 
     public String getEmail() {
@@ -71,7 +72,7 @@ public class ClientEntitie {
     @Override
     public String toString() {
         return "ClientEntitie{" +
-                "Id='" + Id + '\'' +
+                "identity='" + identity + '\'' +
                 ", Email='" + Email + '\'' +
                 ", Address='" + Address + '\'' +
                 ", name='" + name + '\'' +
